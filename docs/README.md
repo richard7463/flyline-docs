@@ -1,30 +1,36 @@
 # Flyline
 
-## 看见危险。判断方向。活过下一秒。
+## See the danger. Choose a direction. Survive the next second.
 
-Flyline 是一款把果蝇逃逸回路变成可玩的单机血脉 roguelite。你不是控制一只拥有无限生命的角色，而是在有限能量、有限感知和捕食压力中，替一条血脉争取下一代。
+Flyline turns a simplified fruit-fly escape circuit into a single-player lineage roguelite. You do not protect an endlessly renewable avatar. You make short-horizon decisions about food, energy, exposure, and escape so that a lineage can reach another generation.
 
-> 觅食，产卵，观察逼近的危险，在 Giant Fiber（GF）反射亮起时做出决定。
+> Forage, lay eggs, read the approaching threat, and act when the Giant Fiber (GF) response becomes ready.
 
-## 三分钟了解项目
+## In three minutes
 
-1. **进入培养皿**：移动果蝇，寻找糖、酵母和腐物。
-2. **管理能量**：高能量会自动转化为卵；食物收益越高，通常风险也越高。
-3. **读懂扑杀**：捕食者会接近，然后承诺一条弹道。GF READY 时按 Space 或触摸 GF 按钮逃逸。
-4. **跨代选择**：一代结束后与 wild type 比较卵数，从 Mutation Draft 三选一；死亡只结束当前一代，血脉会继续。
-5. **理解模型**：运动视觉信号在简化模型中经过 LC4/LPLC2，影响 GF 逃逸阈值。
+1. **Enter the dish.** Move toward sugar, yeast, and rot.
+2. **Manage energy.** Energy is converted into eggs automatically; high-value food often carries higher exposure or positional risk.
+3. **Read the lunge.** The predator approaches, then commits to a trajectory. When GF is READY, press Space or tap **GF ESCAPE**.
+4. **Choose the next generation.** At the end of a generation, compare eggs with the wild type and choose one card from a three-card mutation draft.
+5. **Learn the model.** In the simplified model, motion-vision signals associated with LC4 and LPLC2 influence the GF escape threshold.
 
-## 当前状态
+## Current status
 
-当前版本已经可以完整游玩单机生存循环、跨代突变、野生型比较、移动端操作和 connectome-inspired 对照实验。文档中的每个功能都标注为**已实现**、**建设中**或**远期**；规划中的多人、AI 同场和开放 benchmark 不是当前线上功能。
+The current release is a playable single-player loop with lineage progression, mutations, wild-type comparison, desktop and mobile input, local browser saves, and an experimental connectivity comparison. Every page uses a status label. Multiplayer, AI or agent play, open APIs, payment services, wallets, and benchmarks are not current features.
 
-## 从哪里开始？
+The [economy and optional services](economy/README.md) section documents external reference patterns and future research only. MurMur, x402, USDC, Arc, Circle Facilitator, and token economics are not current Flyline integrations.
 
-- 想马上玩：阅读[如何游玩](play/how-to-play.md)。
-- 想理解科学边界：阅读[生物学边界](biology/biology-boundaries.md)和[逃逸回路](biology/escape-circuit.md)。
-- 想复现实验：阅读[可复现实验](biology/reproducible-experiment.md)。
-- 想贡献代码：阅读[技术架构](systems/architecture.md)和[贡献指南](development/contributing.md)。
+## Where to start
 
-## 一个重要的诚实声明
+- [How to play](play/how-to-play.md) for controls and first decisions.
+- [Biology boundaries](biology/biology-boundaries.md) and [escape circuit](biology/escape-circuit.md) for the science/game boundary.
+- [Reproducible experiment](biology/reproducible-experiment.md) for the fixed assay and its limitations.
+- [Media](media.md) for the text walkthrough, publication status, and verified diagrams.
+- [Economy and optional services](economy/README.md) for future payment architecture and token-economics research.
+- [Architecture](systems/architecture.md) and [contributing](development/contributing.md) for technical work.
 
-Flyline 使用真实研究中的回路名称与突触计数作为设计锚点，但当前实现是 **connectome-inspired 的可玩化简化模型**。它不是完整果蝇大脑、完整 FlyWire 连接组或完整行为仿真。游戏的价值在于把一个可检查的生物学问题变成玩家可以亲手体验、重跑和讨论的规则系统。
+The [media page](media.md) embeds diagrams for the current architecture and the published seed `1337` experiment figures. These are documentation graphics, not gameplay screenshots or video captures.
+
+## Honest scope statement
+
+Flyline uses research-informed circuit names and synapse-count anchors as design references. It is a **connectome-inspired playable model**, not a complete fruit-fly brain, a complete connectome runtime, or a claim about animal behavior. Its purpose is to make a checkable hypothesis into a rule system that players can experience and rerun.

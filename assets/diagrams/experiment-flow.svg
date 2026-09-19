@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Fixed experiment flow</title>
+  <desc id="desc">The declared seed 1337 experiment compares real and shuffled connectivity in 200 paired predator-lunge trials.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#315c9b"/></marker></defs>
+  <rect width="1200" height="620" fill="#f7f9fc"/>
+  <text x="60" y="60" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#17243a">Fixed experiment flow</text>
+  <text x="60" y="92" font-family="Arial,sans-serif" font-size="18" fill="#52627a">Published baseline: seed 1337 · 200 paired trials</text>
+  <g font-family="Arial,sans-serif" fill="#17243a">
+    <rect x="60" y="160" width="220" height="110" rx="16" fill="#dcecff" stroke="#315c9b" stroke-width="3"/><text x="170" y="205" text-anchor="middle" font-size="22" font-weight="700">Declare setup</text><text x="170" y="238" text-anchor="middle" font-size="17">seed 1337</text>
+    <rect x="340" y="160" width="220" height="110" rx="16" fill="#dcecff" stroke="#315c9b" stroke-width="3"/><text x="450" y="205" text-anchor="middle" font-size="22" font-weight="700">Pair trials</text><text x="450" y="238" text-anchor="middle" font-size="17">200 predator lunges</text>
+    <rect x="620" y="120" width="220" height="110" rx="16" fill="#e8defc" stroke="#7450a8" stroke-width="3"/><text x="730" y="165" text-anchor="middle" font-size="22" font-weight="700">Real</text><text x="730" y="198" text-anchor="middle" font-size="17">connectivity</text>
+    <rect x="620" y="300" width="220" height="110" rx="16" fill="#fbe8d5" stroke="#b26b2e" stroke-width="3"/><text x="730" y="345" text-anchor="middle" font-size="22" font-weight="700">Shuffled</text><text x="730" y="378" text-anchor="middle" font-size="17">connectivity</text>
+    <rect x="900" y="210" width="240" height="130" rx="16" fill="#d9f3e3" stroke="#2d8655" stroke-width="3"/><text x="1020" y="253" text-anchor="middle" font-size="22" font-weight="700">Measure</text><text x="1020" y="285" text-anchor="middle" font-size="16">escape rate</text><text x="1020" y="311" text-anchor="middle" font-size="16">mean trigger lead</text>
+  </g>
+  <path d="M280 215 H340" stroke="#315c9b" stroke-width="4" marker-end="url(#arrow)"/><path d="M560 215 H620" stroke="#315c9b" stroke-width="4" marker-end="url(#arrow)"/><path d="M730 230 V300" stroke="#315c9b" stroke-width="4" marker-end="url(#arrow)"/><path d="M840 175 H870 V260 H900" stroke="#315c9b" stroke-width="4" fill="none" marker-end="url(#arrow)"/><path d="M840 355 H870 V290 H900" stroke="#315c9b" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <text x="600" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#52627a">Lead time is measured from GF trigger to committed-lunge impact.</text>
+  <text x="600" y="545" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#52627a">This is a simplified, single-seed game-model comparison—not an animal-behavior claim.</text>
+</svg>

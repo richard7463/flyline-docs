@@ -1,8 +1,8 @@
-# Flyline Documentation
+# Flyline
 
-> 看见危险。判断方向。活过下一秒。
+> See the danger. Choose a direction. Survive the next second.
 
-Flyline 是一款以果蝇逃逸回路为设计锚点的单机血脉生存游戏。玩家在有限能量和捕食压力下觅食、产卵、逃逸，并通过代际突变建立一条能够继续活下去的血脉。
+Flyline is a browser-based, single-player lineage-survival game inspired by fruit-fly escape circuits. You forage, manage energy, lay eggs automatically, read an approaching predator, and spend a limited escape response to carry a lineage into its next generation.
 
 ## Documentation
 
@@ -14,12 +14,18 @@ Flyline 是一款以果蝇逃逸回路为设计锚点的单机血脉生存游戏
 
 ## Current scope
 
-The current implementation is a browser-based single-player game with a connectome-inspired escape model, lineage progression, mutations, predator pressure, and a reproducible control experiment.
+The current implementation is a single-player browser game with lineage progression, mutations, predator pressure, mobile and desktop controls, local saves, and a connectome-inspired escape model. The model is a playable simplification: it uses research-informed circuit names and synapse-count anchors, but it does not run a complete fruit-fly brain, a complete connectome, or a full biological simulation.
 
-The biological model is a playable simplification. It uses research-informed circuit names and synapse-count anchors, but does not claim to run a complete fruit-fly brain, complete FlyWire connectome, or full biological simulation.
+Multiplayer, AI or external-agent control, open APIs, and benchmark infrastructure are not current features. They are documented only as possible future directions. See [Project status](docs/status.md) for explicit status labels.
 
-Multiplayer, external agent control, open observation APIs, and benchmark infrastructure are future directions rather than current online features.
+## Status labels
+
+Pages use **Implemented**, **In progress**, **Planned**, **Experimental**, and **Not currently available** to distinguish shipped behavior from proposals and research.
+
+## Media
+
+The public media page exists, but authorized production screenshots and videos are not currently available. Until authentic captures exist, documentation descriptions and diagrams are not substitutes for gameplay footage.
 
 ## License
 
-The project license is not finalized yet. See [License](docs/legal/license.md) for the current status.
+The project license is not finalized. See [License](docs/legal/license.md) for the current status.

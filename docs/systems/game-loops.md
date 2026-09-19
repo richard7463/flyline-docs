@@ -1,19 +1,21 @@
-# 游戏循环
+# Game loops
 
-## 四层结构
+**Status: Implemented for the first two loops; In progress for macro systems**
 
-- **微循环**：移动、觅食、能量、自动产卵和 GF 逃逸。
-- **中循环**：50 秒一代、wild type 比较和三选一突变。
-- **宏循环**：环境、捕食者成长和代中事件（建设中）。
-- **Meta**：血脉纪录、每日种子和未来血脉树。
+## Four layers
 
-所有新系统都应说明服务哪一层，避免把一次性数值奖励直接塞进 meta 层而破坏生存决策。
+- **Micro loop:** movement, foraging, energy, automatic eggs, and GF escape.
+- **Meso loop:** a 50-second generation, wild-type comparison, and a three-card mutation choice.
+- **Macro loop:** environment change, predator development, and mid-generation events; **In progress**.
+- **Meta loop:** lineage records and future daily seeds or lineage-tree features; partly **Planned**.
 
-## 每帧顺序
+Every new system should state which loop it serves and which player decision it changes. A feature that merely adds a reward should not silently become a meta-progression system.
+
+## Per-frame order
 
 ```text
-输入 → updateFly → GF / 移动 / 进食 / 产卵
-     → updatePredator → 世代结算 → 世界表现 → HUD
+input → updateFly → GF / movement / feeding / egg laying
+      → updatePredator → generation resolution → presentation → HUD
 ```
 
-捕食者的 committed lunge、GF assay、种子消费顺序和 `sim.js` 纯度是系统不变量。
+The committed lunge rule, GF assay, seed-consumption order, and DOM-independent simulation boundary are system invariants for the current implementation.

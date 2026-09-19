@@ -1,33 +1,32 @@
-# 生存循环
+# Survival loop
+
+**Status: Implemented**
 
 ```text
-移动与觅食
-  → 能量变化
-  → 自动产卵
-  → 捕食者 approach
-  → 承诺弹道 lunge
-  → GF 逃逸或命中
-  → 50 秒结束 / 能量耗尽 / 被击杀
-  → 与 wild type 比较
-  → 三选一突变
-  → 下一代
+Move and forage
+  → energy changes
+  → eggs are laid automatically
+  → predator approaches
+  → predator commits to a lunge
+  → GF escape or impact
+  → 50 seconds / energy depletion / death
+  → compare with wild type
+  → choose one mutation
+  → next generation
 ```
 
-## 微循环：秒级
+## Micro loop: seconds
 
-你持续在速度、能量和暴露风险之间取舍。吃东西能恢复能量，但会改变你的位置；保持移动可能更安全，却会增加移动和代谢压力。
+You trade speed, energy, position, and exposure continuously. Eating restores energy but may require a vulnerable route. Staying mobile can reduce positional danger while increasing movement and metabolic cost. GF is a limited decision, not a permanent shield.
 
-## 中循环：一代
+## Meso loop: one generation
 
-一代最多 50 秒。卵数是当前代最重要的产出，wild type 是同一世界里的比较对象。死亡只结束本代，不清除血脉。
+A generation lasts up to 50 seconds. Eggs are the central output. The wild type provides a comparison in the same game context, while death ends only the current generation.
 
-## 宏循环：血脉
+## Macro loop: lineage
 
-突变可以叠加或形成风格分岔。当前版本已经支持跨代血脉和野生型进化；更复杂的环境轮换与捕食者成长属于建设中内容。
+Mutations accumulate into different survival styles: cautious foraging, high-risk feeding, lower metabolism, faster movement, or more deliberate escape. Some broader systems—environment rotation, mid-generation events, and more predator behaviors—are **In progress**, not current promises.
 
-## 设计原则
+## Design test
 
-- 紧张感来自“下一次扑杀”和能量倒计时。
-- 深度来自 Mutation Draft 的取舍，而非无限堆叠数值。
-- 新鲜感来自未来的环境与事件变化。
-- 长期目标是让每个 build 都代表一种不同的生存方式。
+A new system should answer which loop it serves and what decision it changes. A reward that only adds a number without changing observation, movement, timing, or risk belongs in neither the survival loop nor the lineage strategy.

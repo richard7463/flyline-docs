@@ -1,5 +1,7 @@
-# 许可证状态
+# License status
 
-当前仓库尚未完成最终公开许可证声明。本页面不擅自将项目称为 MIT 或其他开源许可证项目。
+**Status: Planned / Not currently available**
 
-在许可证正式添加前，请把代码、图片、音频、第三方依赖和科学资料的授权边界分开确认。贡献者也应在提交前了解项目当前的授权状态。
+The repository does not yet contain a final public license declaration. This page therefore does not describe the project as MIT-licensed or as any other open-source license.
+
+Before a license is added, the project should separately confirm the rights for code, images, audio, third-party dependencies, and scientific reference materials. Contributors should check the current authorization status before submitting work.

@@ -1,16 +1,18 @@
-# 模拟核心
+# Simulation core
 
-`js/sim.js` 是可测试的规则基础，包含：
+**Status: Implemented**
 
-- 种子随机数和世界初始化；
-- GF 输入、阈值和逃逸 trial；
-- `TRAIT_INFO`、`recomputeStats`、飞行个体初始化；
-- real/shuffled connectivity 对照实验。
+The pure simulation layer contains the rules needed for:
 
-## 规则与表现分离
+- seeded random numbers and world initialization;
+- GF input, thresholds, and escape trials;
+- trait definitions, stat recomputation, and fly initialization;
+- the real/shuffled connectivity experiment.
 
-速度、代谢、感知、伤害和逃逸窗口属于规则；粒子、音效、震屏、慢动作和浮动文字属于表现。表现可以丰富反馈，但不能偷偷改变 assay 或 RNG 消费。
+## Rules and presentation are separate
 
-## 为什么保持纯度
+Speed, metabolism, perception, damage, and escape windows are rules. Particles, sound, screen shake, slow motion, and floating text are presentation. Presentation may clarify feedback but must not silently change the assay or consume simulation randomness.
 
-纯模拟层可以在 Node 中运行，支持每日种子、离线复现和未来的服务器权威模拟。当前项目仍是单机游戏，服务器和多人场景属于远期方向。
+## Why purity matters
+
+A DOM-independent layer makes the current experiment rerunnable and keeps future clients possible. It does not mean that a server, multiplayer mode, or public API exists today; those are **Not currently available**.

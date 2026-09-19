@@ -1,23 +1,25 @@
-# 生物学边界
+# Biology boundaries
 
-Flyline 的科学表达需要同时做到两点：准确借用研究结果，也准确承认游戏做了哪些简化。
+**Status: Implemented as a design boundary; Experimental where stated**
 
-## 我们当前做的事
+Flyline uses science as a constraint on game design and is explicit about where the analogy stops.
 
-- 使用果蝇逃逸行为相关的回路名称和连接关系作为设计锚点。
-- 使用 LC4 与 LPLC2 的真实突触计数作为连接权重的参考尺度。
-- 将视觉运动、威胁判断、GF 触发和跳跃动作压缩为可玩的规则。
-- 用固定 seed、配对 trial 和明确指标比较两种连接配置。
+## What the game does
 
-## 我们没有声称的事
+- Uses names and relationships associated with fruit-fly escape circuits as design anchors.
+- Uses the stated LC4 and LPLC2 synapse counts as reference scales for connection weights.
+- Compresses motion vision, threat evidence, GF triggering, and jump escape into readable rules.
+- Compares two connectivity configurations under a fixed seed, paired trials, and declared metrics.
 
-- 不是完整果蝇大脑模拟。
-- 不是完整 FlyWire 或 MaleCNS 连接组运行环境。
-- 不是逐神经元、逐突触的生理仿真。
-- 不是“实验已经证明某种生物学真理”。
+## What the game does not claim
 
-因此公开文档统一使用 **connectome-inspired**：它说明设计受连接组数据启发，而不是把游戏简化模型冒充成原始生物系统。
+- It is not a complete fruit-fly brain simulation.
+- It is not a complete FlyWire or MaleCNS runtime.
+- It is not a neuron-by-neuron or synapse-by-synapse physiological simulation.
+- Its experiment is not evidence of a universal biological truth.
 
-## 未来的生物学模块
+“Connectome-inspired” means that connectome research informs the design. It does not mean that the game runs the original biological system or reproduces animal behavior.
 
-趋光、昼夜节律、嗅觉、信息素和觅食回路正在研究或规划中。只有当一个回路能改变玩家看见什么、能做什么或必须承担什么代价，它才会进入游戏；新增一个真实名字本身不是功能完成的标准。
+## Mapping boundary
+
+A biological term may map to a gameplay signal, parameter, or choice. That mapping is an interpretation made for playability. It is not a one-to-one claim that a player action is equivalent to a fly's neural event. New biology belongs in the game only when it changes what the player can observe, do, or risk.

@@ -1,31 +1,39 @@
-# 技术架构
+# Architecture
 
-## 分层
+**Status: Implemented**
+
+## Layers
 
 ```text
 index.html + style.css + ui.js
-  DOM 菜单、HUD、抽卡、触摸输入
-          ↕ CustomEvent / scene methods
+  DOM menu, HUD, mutation draft, and touch input
+          ↕ events / scene methods
 scene-game.js
-  Phaser 世界、玩法编排、捕食者与世代
-          ↓ import 纯函数
+  Phaser world, gameplay orchestration, predator, and generations
+          ↓ imports pure functions
 sim.js
-  常量、种子 RNG、GF、实验、traits、stats
+  constants, seeded RNG, GF, experiment, traits, and stats
 ```
 
-辅助模块包括：`scene-boot.js` 程序化贴图、`audio.js` WebAudio、`main.js` Phaser 启动和响应式画布尺寸。
+Supporting modules provide procedural textures, WebAudio, Phaser startup, and responsive canvas sizing.
 
-## 关键边界
+## Public boundaries
 
-- `sim.js` 不依赖 DOM、Phaser 或 localStorage，可由 Node 直接运行。
-- `scene-game.js` 是规则编排唯一入口，负责把纯逻辑和世界对象连接起来。
-- `ui.js` 只负责展示和收集输入，不应复制游戏规则。
-- 画布使用 `this.scale.gameSize`，世界坐标独立于屏幕像素。
+- `sim.js` has no DOM, Phaser, or `localStorage` dependency and can run as a logic layer.
+- `scene-game.js` is the orchestration point connecting pure rules to world objects.
+- `ui.js` displays state and collects input; it should not duplicate rules.
+- World coordinates remain independent of screen pixels through Phaser's game-size scaling.
 
-## 事件桥
+## Event bridge
 
-游戏通过 `flyline:log`、`flyline:genstart` 和 `flyline:genend` 通知 DOM。菜单通过 `beginRun`、`nextGen`、`setSeed` 等 scene 方法发起动作。
+The game reports generation and HUD events to the DOM, while menus call explicit scene methods to begin a run, move to the next generation, or set a seed. The current public architecture is local and single-player; an external-agent interface or server is not implemented.
 
-## 未来插入点
+## Optional service boundary
 
-agent 接口、环境修饰、代中事件和更多突变应在现有层级中加入，不要让 UI 直接修改模拟状态，也不要把 Phaser 对象引入纯逻辑层。
+If a future hosted service is built, it should sit outside the local simulation and event bridge. A possible HTTP observation, replay, or evaluation service could later be paired with x402 request payments, USDC settlement, an Arc network deployment, or Circle Facilitator-assisted settlement. None of these components exists in the current release, and MurMur is an external reference rather than a Flyline dependency.
+
+The service boundary must not pull wallets, payment SDKs, chain state, or facilitator responses into `sim.js`. Payment receipts and wallet identity must remain separate from the current lineage save. A successful payment must not silently alter GF rules, experiment metrics, mutation outcomes, or the fairness of the local game.
+
+## Extension rule
+
+New environments, events, or traits should enter the existing layers without letting UI code mutate simulation state directly or pulling Phaser objects into the pure logic layer.

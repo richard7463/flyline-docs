@@ -1,42 +1,40 @@
-# 可复现实验
+# Reproducible experiment
 
-## 实验问题
+**Status: Experimental**
 
-在相同的捕食者接近场景中，保留 LC4/LPLC2 的真实权重关系，与打乱连接权重相比，GF 是否更可能在承诺扑杀前触发足够早的逃逸？
+## Question
 
-## 固定条件
+Under the same predator-approach scenario, does retaining the declared LC4/LPLC2 connectivity relationship make GF escape more likely to trigger early enough before a committed lunge than shuffling that connectivity?
 
-- seed：`1337`
-- 配对 trial：`200`
-- 每个 trial：一次捕食者 committed lunge
-- 唯一变量：real connectivity 与 shuffled connectivity
-- 指标：GF 触发到承诺扑杀命中之间的 lead time，以及该 trial 是否成功逃脱
+## Setup
 
-这里的 lead time 不是跳跃次数、存活总时间或产卵数；它只表示单次承诺扑杀中，逃逸是否提前达到所需窗口。
+- **Seed:** `1337`
+- **Paired trials:** `200`
+- **Each trial:** one predator committed lunge
+- **Independent variable:** real connectivity versus shuffled connectivity
+- **Metrics:** escape success and mean trigger lead time, measured from GF trigger to committed-lunge impact
 
-## 当前基线结果
+Lead time is not survival duration, jump count, or egg production. It describes the timing margin in one committed attack.
 
-运行 `runExperiment(1337)` 得到：
+## Published baseline
 
-| 配置 | 逃脱率 | 平均 trigger lead |
+| Configuration | Escape rate | Mean trigger lead |
 | --- | ---: | ---: |
 | Real connectivity | 100% | 0.202 s |
 | Shuffled connectivity | 68% | 0.183 s |
 
-这些结果说明，在**当前简化模型、当前指标、当前 seed 和当前 200 次配对试验**下，真实连接配置的逃逸表现更可靠。
+These are the only published experiment figures for this phase: seed `1337`, `200` paired trials, real `100% / 0.202s`, and shuffled `68% / 0.183s`.
 
-## 如何重跑
+## Rerun procedure
 
-在项目根目录运行：
+Run the project's documented simulation command from its project root:
 
 ```bash
 node --input-type=module -e "import('./js/sim.js').then(m => console.log(m.runExperiment(1337)))"
 ```
 
-实验代码位于 `js/sim.js`，不依赖 DOM 或 Phaser，因此可以在 Node 中直接执行，也可以由游戏菜单调用。
+The experiment is designed to run without the DOM or Phaser. A rerun should record the seed, paired-trial count, configuration names, metric definitions, and output. Do not replace a changed result with the published baseline without investigating the cause.
 
-## 如何解释结果
+## Limitations
 
-结果不是对真实动物行为的普遍证明，也不是说“真实连接永远优于任何打乱方式”。它是一个可复现的模型比较：在定义好的 assay 中，连接权重排列改变了 GF 逃逸结果。
-
-任何修改 GF、捕食者承诺弹道或 assay 指标的代码，都必须重新记录 seed、样本数、指标定义和结果，不能只更新宣传数字。
+This is a small, paired comparison in a simplified model. It tests one seed, one trial design, one predator event, and one metric definition. It does not establish animal behavior, generalize to all seeds, prove a causal biological claim, or compare every possible shuffle. Changes to GF, the predator trajectory, RNG consumption, or the metric require a new declared experiment rather than an informal number update.

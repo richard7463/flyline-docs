@@ -1,7 +1,11 @@
-# 隐私与本地存储
+# Privacy and local storage
 
-当前版本是单机前端游戏。血脉进度、突变、seed、卵数历史和连接模式保存在浏览器的 `localStorage` 中，用于本机继续游戏。
+**Status: Implemented for local-only play; Not currently available for network services**
 
-当前版本不要求登录，也不依赖游戏服务器来保存进度。清除存档会删除当前浏览器中的本地数据；清除浏览器站点数据也可能导致血脉丢失。
+The current release is a single-player front-end game. Lineage progress, mutations, seed, egg history, and connectivity mode are stored in the browser's `localStorage` so the same browser can continue the run.
 
-未来如果加入排行榜、agent 接口或多人模式，需要另行说明网络数据、身份、日志保留和删除机制。那些功能目前不是线上能力。
+No login is required, and progress does not depend on a game server. Clearing the save or browser site data can permanently remove the local lineage from that browser.
+
+The current release has no leaderboard, external-agent service, multiplayer service, public observation endpoint, wallet, or payment integration. If any network feature is added, it must receive a separate notice covering data collected, identity, retention, security, and deletion.
+
+A future service might process a wallet address, payment authorization, service receipt, or on-chain transaction reference. Those records must remain separate from the local lineage save. An on-chain record may be difficult or impossible to delete, while a local save can be cleared; future documentation must explain that distinction before collecting either. No specific wallet, facilitator, or retention policy exists today.

@@ -1,5 +1,7 @@
-# 署名与资料来源
+# Attribution and sources
 
-Flyline 的生物学设计使用果蝇视觉运动与逃逸回路研究作为参考，并以 Ache et al. 2019 / MaleCNS v1.0 的资料作为 LC4、LPLC2 突触计数锚点。
+**Status: Planned for complete public attribution metadata**
 
-公开文档中的“connectome-inspired”表示受到连接组研究启发的游戏化简化，不表示项目重新发布或完整运行原始数据集。正式论文、数据版本和第三方资产的详细授权信息会在项目完成资料清单后继续补充。
+Flyline's biology design refers to fruit-fly motion-vision and escape-circuit research, with Ache et al. (2019) and MaleCNS v1.0 used as anchors for the LC4 and LPLC2 synapse-count references.
+
+“Connectome-inspired” means that connectome research informs a playable simplification. It does not mean that Flyline republishes or fully runs the original datasets. Stable paper links, dataset versions, access dates, and third-party asset licenses should be added before the attribution record is considered complete.

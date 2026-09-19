@@ -1,38 +1,35 @@
-# 逃逸回路
+# Escape circuit
 
-## 从运动视觉到逃逸
+**Status: Implemented in a simplified game model**
 
-Flyline 的第一个生物学模块围绕果蝇面对逼近威胁时的逃逸回路：
+## From motion vision to escape
+
+Flyline's first biology module is organized around a fruit fly's escape response to an approaching threat:
 
 ```text
-运动视觉
-   ├─ LC4：角速度相关输入
-   └─ LPLC2：逼近物体的角大小 / looming 相关输入
-                 ↓
-          Giant Fiber（GF）
-                 ↓
-             跳跃逃逸
+motion vision
+   ├─ LC4: a design channel for angular-velocity-related input
+   └─ LPLC2: a design channel for looming-related input
+                    ↓
+             Giant Fiber (GF)
+                    ↓
+              jump escape
 ```
 
-游戏把两类视觉证据合并为一个带阈值的 GF 反射：危险越快、越大、越接近，逃逸准备越明显；玩家要在反射窗口中决定是否行动。
+The game combines these evidence streams into a thresholded GF response. A faster, larger, or closer threat can make the response more ready; the player still decides whether and when to act.
 
-## 两条输入通道
+## Two input channels
 
-- **LC4**：在本项目的解释中代表对角速度变化敏感的输入通道，设计锚点为约 **2,442 个突触**。
-- **LPLC2**：代表对 looming 尺寸变化敏感的输入通道，设计锚点为约 **1,366 个突触**。
-- **GF**：将输入汇总为快速逃逸输出。在游戏中表现为 READY 状态、跳跃距离、冷却和能量代价。
+- **LC4:** represented here as sensitivity to changes in angular velocity; design anchor: about **2,442 synapses**.
+- **LPLC2:** represented here as sensitivity to looming size change; design anchor: about **1,366 synapses**.
+- **GF:** represented in the game by readiness, jump distance, cooldown, and energy cost.
 
-这些数字是连接数据锚点，不等于游戏中部署了完整细胞级网络。
+These are connection-data anchors, not a deployed cell-level network.
 
-## 为什么连接排列会影响游戏
+## Why arrangement matters in the game
 
-真实连接模式与 shuffled connectivity 使用相同的捕食者场景和相同的 trial 数，只改变输入权重排列。真实配置更偏向及时捕捉速度线索；打乱后仍然可以触发逃逸，但窗口和成功率会发生变化。
+The real and shuffled configurations use the same predator context and paired trial count while changing the arrangement of input weights. In the fixed baseline, the real configuration is more reliable under the declared metric. That is a testable game-model hypothesis, not a statement that real connectivity is universally superior or that the result transfers directly to animals.
 
-这种差异不是把玩家变成实验动物的声明，而是一个可检查的设计假设：连接结构应该改变行为结果，而不仅是改变 UI 文案。
+## Limits and extensions
 
-## 正在研究的扩展
-
-- 更细的 looming 与角速度时间序列，而不是单一标量。
-- 趋光和昼夜输入如何调节视觉逃逸。
-- 嗅觉与信息素如何改变捕食者选择和觅食路线。
-- 在不破坏当前 GF assay 基线的前提下，引入更多行为选择。
+The current mapping reduces rich time-varying visual signals to a small rule set. Potential extensions include finer looming and angular-velocity traces, light and circadian modulation, and olfactory context. Each extension must preserve a clear mapping, a player consequence, and a rerunnable test.

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Flyline public architecture</title>
+  <desc id="desc">A local browser game architecture with UI, game orchestration, and a DOM-independent simulation layer.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#315c9b"/></marker></defs>
+  <rect width="1200" height="620" fill="#f7f9fc"/>
+  <text x="60" y="64" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#17243a">Public architecture</text>
+  <text x="60" y="96" font-family="Arial,sans-serif" font-size="18" fill="#52627a">Current local, single-player browser boundary</text>
+  <rect x="90" y="145" width="1020" height="120" rx="18" fill="#dcecff" stroke="#315c9b" stroke-width="3"/>
+  <text x="600" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#17243a">Browser UI</text>
+  <text x="600" y="226" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#30445f">DOM menu, HUD, mutation draft, and touch input</text>
+  <line x1="600" y1="266" x2="600" y2="330" stroke="#315c9b" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="90" y="330" width="1020" height="120" rx="18" fill="#e8defc" stroke="#7450a8" stroke-width="3"/>
+  <text x="600" y="375" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#17243a">Game orchestration</text>
+  <text x="600" y="411" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#30445f">Phaser world, gameplay orchestration, predator, and generations</text>
+  <line x1="600" y1="451" x2="600" y2="515" stroke="#315c9b" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="90" y="515" width="1020" height="70" rx="18" fill="#d9f3e3" stroke="#2d8655" stroke-width="3"/>
+  <text x="600" y="559" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#17243a">Pure simulation layer</text>
+  <text x="600" y="584" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#30445f">constants · seeded RNG · GF · experiment · traits · stats</text>
+</svg>

@@ -1,24 +1,26 @@
-# 突变管线
+# Trait pipeline
 
-## 数据流
+**Status: Implemented for current traits; In progress for additional behavior cards**
+
+## Data flow
 
 ```text
 TRAIT_INFO
   → recomputeStats(fly)
-  → stats 数值字段与行为开关
-  → scene-game.js 的消费点
+  → stat fields and behavior flags
+  → scene consumers
 ```
 
-行为 trait 应通过 `fly.stats` 判断，而不是在场景代码中到处查找 `fly.traits.includes(...)`。这样一张卡的规则入口清晰，也更容易在 Node 中测试。
+Behavioral traits should be represented through computed fly stats rather than scattered checks for trait names in scene code. This keeps each rule entry visible and testable.
 
-## 消费点
+## Consumers
 
-- `getSteer`：趋光、醉跑惯性和自动行为。
-- `updateFly`：代谢、进食、产卵和同类互动。
-- `updatePredator`：拟态、护卵、滞育和目标选择。
-- `tryDash`：主动跳跃、距离、能量与冷却。
-- `updateGF`：保持当前 GF 核心与实验基线稳定。
+- steering: light preference, intoxicated inertia, and automatic behavior;
+- fly update: metabolism, feeding, egg laying, and interactions;
+- predator update: mimicry, guarding, dormancy, and target selection;
+- dash: jump distance, energy, and cooldown;
+- GF update: the escape core and its experimental baseline.
 
-## 新增 trait 的验收
+## Acceptance criteria
 
-每张卡必须有收益和代价或强情境性，必须改变玩家决策，并且不能破坏 `runExperiment(1337)` 基线。UI 文案、状态统计和保存数据应与 sim 层使用同一 key。
+Each new trait needs a benefit plus a cost or a strong situation, must change a player decision, and must not silently change the published assay. UI text, status summaries, and save fields should use the same key as the simulation layer.

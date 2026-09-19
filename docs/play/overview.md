@@ -1,25 +1,35 @@
-# 游戏概览
+# Overview
 
-## 你玩的是一条血脉
+**Status: Implemented**
 
-Flyline 的核心单位不是“这一只果蝇”，而是一条会跨代延续的 lineage。每一代有最多 50 秒：你在培养皿中寻找食物、维持能量、自动产卵，并避开捕食者的承诺扑杀。
+Flyline is a single-player lineage-survival game. The meaningful unit is not one immortal fly but a lineage that must repeatedly turn energy into eggs while avoiding a committed predator attack. A generation lasts up to 50 seconds and ends when the fly is killed, runs out of energy, or reaches the time limit.
 
-这一代可能因为能量耗尽或被捕食者击杀而结束，也可能撑满 50 秒。结束后，卵数会与 wild type 比较，你从三张突变卡中选择一张，进入下一代。
+## Four decisions
 
-## 四个决策
-
-| 决策 | 你在权衡什么 |
+| Decision | Trade-off |
 | --- | --- |
-| 去哪里觅食 | 收益、距离和捕食者风险 |
-| 什么时候继续吃 | 能量与暴露位置之间的关系 |
-| 什么时候按 GF | 太早浪费逃逸资源，太晚会撞上弹道 |
-| 选择哪张突变 | 下一代的生活方式，而不是单纯的数值加成 |
+| Where to forage | Food value, travel time, and predator exposure |
+| When to keep eating | More energy and eggs versus a more exposed position |
+| When to press GF | Preserve the escape resource versus avoid the committed trajectory |
+| Which mutation to take | A future way of living, not a universal upgrade |
 
-## 一局的节奏
+## A generation's rhythm
 
-- **前段**：建立能量，熟悉食物分布与昼夜。
-- **中段**：开始产卵；捕食者接近，移动和逃逸需要同时管理。
-- **末段**：决定是继续冒险产更多卵，还是保住当前领先。
-- **结算**：比较 wild type，选择下一代方向。
+- **Early:** establish energy and learn the food layout.
+- **Middle:** automatic egg laying begins while predator pressure becomes harder to ignore.
+- **Late:** decide whether another risky food run is worth more eggs.
+- **Resolution:** compare with the wild type and choose the next mutation.
 
-游戏不要求一次性“通关”。目标是让血脉持续、提高单代表现，并逐渐理解每种突变适合什么风险环境。
+A death ends the current generation, not the lineage. The intended challenge is to learn which choices work under which risk pattern rather than to discover one dominant build.
+
+## FAQ
+
+**Do I control egg laying?** No. Egg laying is automatic when the energy condition is met; your control is the route and risk that make it possible.
+
+**Does the predator continuously track me?** No. The documented lunge commits to a trajectory. The decision is about reading that commitment and using GF at the right time.
+
+**What does a mutation do?** It changes a rule, cost, threshold, or behavior. The useful question is not “is this stronger?” but “what situation makes this trade-off worthwhile?”
+
+**Is this a biological simulator?** No. It is a connectome-inspired game model. See [Biology boundaries](../biology/biology-boundaries.md).
+
+**Can I play online with others or control it through an API?** Not currently. The shipped scope is single-player and local; future ideas are labeled separately.

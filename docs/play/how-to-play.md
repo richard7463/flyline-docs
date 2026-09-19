@@ -1,26 +1,36 @@
-# 如何游玩
+# How to play
 
-## 第一次进入
+**Status: Implemented**
 
-点击 **Start first generation** 开始第一代。先移动到食物附近；不需要手动按键产卵，能量达到条件后会自动产卵。
+## First generation
 
-## PC
+Select **Start first generation**, then move toward food. You do not press a button to lay eggs: once the relevant energy condition is reached, the fly lays them automatically.
 
-- WASD 或方向键：移动。
-- 鼠标按住并移动：朝指针飞行。
-- Space：GF 反射进入 READY 后逃逸。
-- 右上角暂停按钮：暂停并返回菜单。
+## Desktop
 
-## 移动端
+- **WASD or arrow keys:** move.
+- **Hold and move the pointer:** steer toward the pointer.
+- **Space:** trigger GF escape after the response is READY.
+- **Pause:** pause and return to the menu without clearing the lineage.
 
-按住培养皿任意位置并拖动，使用浮动摇杆控制方向。第一次触摸会显示提示；GF 按钮亮起时点击右下角的 **GF ESCAPE**。
+## Touch devices
 
-## 先记住三件事
+Press and drag anywhere in the dish to use the floating joystick. When the **GF ESCAPE** button becomes ready, tap it in the lower-right area.
 
-1. **食物不是越多越好**：腐物收益最高，但会暴露气味；酵母通常靠近盘缘，位置更危险。
-2. **观察捕食者的承诺动作**：接近不等于马上命中；真正的 lunge 会锁定它承诺的方向。
-3. **不要把死亡当成整局失败**：本代结束后，血脉和已获得的突变仍然存在。
+## Three rules worth remembering
 
-## 结束后做什么
+1. **More food is not always better.** Rot gives the largest listed energy gain but exposes the fly to predator attention; yeast is often near the edge, where travel and exposure matter.
+2. **Approach is not the hit.** Watch for the predator's committed lunge. It does not continuously correct its trajectory after commitment.
+3. **Death is a generation result.** The lineage and acquired mutations remain available for the next generation.
 
-结算页会显示你的卵数、wild type 卵数、是否刷新纪录和死亡原因。选择一张 Mutation Draft 卡片后，下一代立即继承这项选择。
+## End-of-generation decisions
+
+The result view reports eggs, the wild-type comparison, record information, and the cause of death when relevant. Choose one Mutation Draft card; the next generation inherits that choice.
+
+## FAQ
+
+**What should I learn first?** Use sugar to learn movement and predator timing before taking a high-risk route.
+
+**When should I use GF?** Use it when the committed trajectory threatens the fly and the response is READY. Pressing too early can waste a scarce resource; pressing too late may leave no safe exit.
+
+**What counts as success?** There is no single required victory screen. A strong generation produces eggs and leaves a viable lineage for the next decision.

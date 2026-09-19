@@ -1,13 +1,15 @@
-# 建设中
+# In progress
 
-## 突变深度
+**Status: In progress**
 
-将 rover、sitter、mimic、cannibal、diapause、adh、phototax、guard、clock、hopper 和 pheromone 从设计规格变成可验证的行为；同时保持每张卡的代价和 GF assay 基线。
+## Mutation depth
 
-## 世界变化
+Turn rover, sitter, mimic, cannibal, diapause, adh, phototax, guard, clock, hopper, and pheromone from public design specifications into validated behavior while preserving an explicit cost and the GF assay baseline.
 
-研究每五代环境轮换、代中随机事件、捕食者佯攻与连续扑杀。这些系统必须使用确定性 seed，且不能把承诺弹道改成持续追踪。
+## World variation
 
-## 长线体验
+Evaluate every-five-generation environment rotation, mid-generation events, predator feints, and repeated attacks. These systems must use declared deterministic seeds and must not turn a committed lunge into continuous tracking.
 
-每日 seed 挑战、血脉树、新手引导、真实手机试玩和平衡评估正在建设或评估中。完成标准包括可玩性，而不只是代码存在。
+## Long-session quality
+
+Daily-seed concepts, a lineage tree, onboarding, real-device play, and balance evaluation are being built or assessed. Completion requires evidence that the experience is playable and understandable, not only that an implementation exists.

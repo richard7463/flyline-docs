@@ -1,23 +1,25 @@
-# 贡献指南
+# Contributing
 
-## 先理解边界
+**Status: Implemented contribution guidance**
 
-贡献前阅读玩家指南、[技术架构](../systems/architecture.md)和[可复现实验](../biology/reproducible-experiment.md)。小改动也要知道它是否影响 seed、GF、捕食者承诺弹道和存档格式。
+## Understand the boundary first
 
-## 代码原则
+Read the player guide, [architecture](../systems/architecture.md), and [reproducible experiment](../biology/reproducible-experiment.md). Even a small change may affect seeds, GF timing, predator commitment, or save compatibility.
 
-- 保持 `sim.js` 无 DOM、无 Phaser、无 localStorage。
-- 新 trait 通过 `TRAIT_INFO → recomputeStats → scene hook` 接入。
-- 不在捕食者 lunge 阶段加入持续追踪。
-- 不用表现层随机数改变世界规则。
-- 不把规划功能写成已实现功能。
-- 新增存档字段提供合理默认值。
+## Code principles
 
-## 提交前
+- Keep `sim.js` free of DOM, Phaser, and `localStorage` dependencies.
+- Add traits through `TRAIT_INFO → recomputeStats → scene hook`.
+- Do not add continuous tracking during the predator's committed lunge.
+- Do not let presentation randomness alter world rules.
+- Do not describe a planned feature as implemented.
+- Give new save fields a safe default.
 
-1. 跑 Node 逻辑实验和语法检查。
-2. 手动走一遍开始、觅食、逃逸、结算、抽卡和下一代。
-3. 如果修改触摸或响应式布局，在桌面和真实移动设备上检查。
-4. 更新受影响的公开文档，并标注实现状态。
+## Before submitting
 
-当前项目许可证尚未最终确定，因此贡献代码前请确认维护者对授权方式的安排。
+1. Run the logic experiment and syntax checks.
+2. Manually play the start, forage, escape, result, draft, and next-generation flow.
+3. If touch or responsive layout changes, check both desktop and a real mobile device.
+4. Update affected public pages and mark the implementation status.
+
+The project license is not final. Confirm the maintainer's authorization arrangement before contributing code or assets.

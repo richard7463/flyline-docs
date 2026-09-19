@@ -1,22 +1,24 @@
-# 本地开发
+# Local development
 
-Flyline 是静态页面，没有打包步骤。Phaser 已放在 `vendor/phaser.min.js`，入口页面通过 ES module 加载 `js/main.js`。
+**Status: Implemented**
+
+Flyline is a static page with no bundling step. Phaser is loaded from the vendor directory and the entry page loads the JavaScript modules directly.
 
 ```bash
 cd /path/to/flyline
 python3 -m http.server 8124
 ```
 
-然后打开 `http://127.0.0.1:8124/`。不要直接用 `file://` 打开，因为浏览器会限制 module 加载。
+Then open `http://127.0.0.1:8124/`. Do not open the entry page with `file://`; browsers commonly restrict module loading in that mode.
 
-## 目录重点
+## Important files
 
-- `index.html`：游戏 DOM 结构。
-- `style.css`：页面和 HUD 样式。
-- `js/sim.js`：纯模拟与实验。
-- `js/scene-game.js`：Phaser 玩法编排。
-- `js/ui.js`：菜单、HUD、抽卡和触摸输入。
-- `js/scene-boot.js`：程序化纹理。
-- `js/audio.js`：WebAudio 音效。
+- `index.html`: game DOM structure.
+- `style.css`: page and HUD styling.
+- `js/sim.js`: pure simulation and experiment.
+- `js/scene-game.js`: Phaser gameplay orchestration.
+- `js/ui.js`: menu, HUD, mutation draft, and touch input.
+- `js/scene-boot.js`: procedural textures.
+- `js/audio.js`: WebAudio effects.
 
-本地开发不需要账号、数据库或外部 API。
+Local development does not require an account, database, or external API.

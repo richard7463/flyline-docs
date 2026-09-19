@@ -1,35 +1,31 @@
-# Connectome-inspired 模型
+# Connectome-inspired model
 
-## 模型如何进入规则
+**Status: Implemented as a simplified model; Experimental for connectivity comparison**
 
-游戏不直接运行一个完整脑网络，而是把研究中的连接关系翻译成少量可读参数：
+## How biology becomes rules
 
-| 生物学概念 | 游戏中的可观察结果 |
+Flyline does not run a complete brain network. It translates a small set of research-informed relationships into parameters that a player can observe:
+
+| Biological idea | Observable game result |
 | --- | --- |
-| 运动视觉 | 捕食者逼近时的威胁信号 |
-| LC4 输入 | 对速度变化的权重 |
-| LPLC2 输入 | 对 looming 尺寸的权重 |
-| GF 输出 | READY 窗口、跳跃与冷却 |
-| 身体状态 | 能量、速度、感知范围和代价 |
+| Motion vision | Threat evidence as the predator approaches |
+| LC4 input | Weight associated with speed/angle change |
+| LPLC2 input | Weight associated with looming size change |
+| GF output | READY window, jump, cooldown, and cost |
+| Body state | Energy, speed, perception range, and exposure |
 
-这种翻译有意保留“输入不完整、反应很快、行动有代价”的感觉，同时让玩家能理解自己为什么在某一刻应该逃逸。
+The translation keeps three useful constraints: inputs are incomplete, responses are fast, and actions have costs. It does not preserve every biological variable.
 
-## 研究锚点
+## Research anchors
 
-项目采用的公开锚点是：
+The public anchors used by the project are approximately 2,442 synapses for LC4 and 1,366 for LPLC2, with Ache et al. (2019) and MaleCNS v1.0 cited as source anchors. These figures are not evidence that Flyline reconstructed the complete connectome.
 
-- LC4：约 2,442 synapses；
-- LPLC2：约 1,366 synapses；
-- 资料锚点：Ache et al. 2019 / MaleCNS v1.0。
+## Extension test
 
-文档和产品文案会把这些称为真实突触计数锚点，而不是声称 Flyline 重新构建了完整连接组。
+A proposed circuit should answer three questions:
 
-## 未来扩展方法
+1. Does it change a signal the player can observe?
+2. Does it change an action or an action cost?
+3. Can it be tested under a fixed seed with declared metrics?
 
-新回路必须经过三个问题：
-
-1. 它改变玩家能观察到的信号吗？
-2. 它改变玩家可采取的行动或行动代价吗？
-3. 它能在固定种子下被测试和复现吗？
-
-不能通过这三项检查的回路，暂时只会停留在研究或设计阶段。
+If not, it remains a research or design note rather than a claimed gameplay feature.

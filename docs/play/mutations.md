@@ -1,46 +1,43 @@
-# 突变与血脉构筑
+# Mutations and lineage builds
 
-## 已实现的方向
+**Status: Implemented for the listed live cards; In progress for the design cards**
 
-当前版本包含多种数值和行为方向，例如：
+## Implemented directions
 
-- **White eye**：感知范围更大，但夜间感知代价更高。
-- **Curly wing**：速度更快，但代谢增加。
-- **Vestigial wing**：能量上限和代谢更有利，但 GF 跳跃距离下降。
-- **Ebony**：降低捕食者伤害，但感知范围下降。
-- **Fecund**：产卵成本更低，但产卵会暴露气味。
-- **Swift**：逃逸冷却更短，但消耗更高。
-- **Hardy**：代谢更低，但速度下降。
-- **Nocturnal**：取消夜间感知惩罚。
-- **Shaker**：逃逸后短时加速。
-- **Forager**：食物收益更高，但进食后短时减速。
-- **Thrift**：腐物不暴露气味。
-- **Tiger**：反击可以击退并震慑捕食者。
-- **Giant**：能量容量更高，GF 更容易触发，但速度下降。
+The current game includes several numerical and behavioral directions. Examples include:
 
-## 建设中的行为卡
+- **White eye:** wider perception, with a higher night-time perception cost.
+- **Curly wing:** higher speed and higher metabolism.
+- **Vestigial wing:** more favorable energy capacity/metabolism with shorter GF distance.
+- **Ebony:** reduced predator damage with a smaller perception range.
+- **Fecund:** lower egg cost with more exposure while laying.
+- **Swift:** shorter escape cooldown with higher escape cost.
+- **Hardy:** lower metabolism with lower speed.
+- **Nocturnal:** removes the night perception penalty.
+- **Shaker:** short acceleration after escape.
+- **Forager:** higher food gain with short slowing after eating.
+- **Thrift:** rot without scent exposure.
+- **Tiger:** a counter can push back and deter the predator.
+- **Giant:** larger energy capacity and an easier GF trigger, with lower speed.
 
-以下设计已进入公开规格，但不应视为全部已经上线：
+## In-progress behavioral cards
 
-| 突变 | 生活方式 | 主要代价 |
+These are public designs, not all current features.
+
+| Card | Intended lifestyle | Cost or limitation |
 | --- | --- | --- |
-| rover | 快速探索，扩大觅食范围 | 更高代谢，食物重生更远 |
-| sitter | 在熟悉地点安居，原地取食 | 速度下降 |
-| mimic | 低速或静止时躲过运动视觉 | 能量仍然消耗，夜间效果减弱 |
-| cannibal | 靠近 wild type 时夺取能量 | 暴露气味 |
-| diapause | 低能量时进入低代谢假死 | 速度下降，不能正常起跳 |
-| adh | 腐物转化为短时醉跑 | 转向迟钝 |
-| phototax | 白天靠近光照圈降低代谢 | 夜间会被灯光吸引 |
-| guard | 在卵堆附近保护血脉 | 卵堆本身暴露并可能受损 |
-| clock | 白天节省代谢 | 夜晚代谢和感知代价更高 |
-| hopper | 任意时机主动逃逸 | 消耗更高，冷却更长 |
-| pheromone | 追踪 wild type 卵堆附近的资源 | 自己的卵也会广播位置 |
+| rover | Explore rapidly and widen the food route | Higher metabolism and more distant respawns |
+| sitter | Stay near a familiar feeding location | Lower speed |
+| mimic | Reduce motion-vision exposure while still or slow | Energy continues to fall; weaker at night |
+| cannibal | Take energy near wild-type flies | Scent exposure |
+| diapause | Enter low-metabolism dormancy at low energy | Lower speed and no normal jump |
+| adh | Convert rot into a temporary intoxicated sprint | Poorer turning |
+| phototax | Reduce daytime metabolism near light | Drawn to light at night |
+| guard | Protect the lineage near an egg pile | The pile is exposed and can be damaged |
+| clock | Save metabolism during the day | Higher night metabolism and perception cost |
+| hopper | Escape at a chosen time | Higher cost and longer cooldown |
+| pheromone | Track resources near wild-type egg piles | Your eggs reveal your position |
 
-## 设计标准
+## How to choose
 
-每张卡都应该回答两个问题：
-
-1. 它改变了玩家如何观察、移动或做决定吗？
-2. 在什么局面下玩家会明确不选它？
-
-如果一张卡在所有环境中都应该选择，它就不是一个有趣的生存策略，而只是数值升级。突变系统的目标是形成站桩、冻结、主动逃逸、夜行和高风险觅食等不同 build。
+A good card must change what you observe, where you move, when you act, or what cost you accept. Ask when you would deliberately refuse a card. If it is always correct, it is a stat upgrade rather than a survival strategy.

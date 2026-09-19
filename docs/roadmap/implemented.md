@@ -1,12 +1,14 @@
-# 已实现
+# Implemented
 
-- 50 秒世代与三种结束条件。
-- 糖、酵母、腐物、能量、自动产卵。
-- 捕食者 approach、committed lunge、recover。
-- GF READY、跳跃逃逸、冷却和能量代价。
-- 玩家与 wild type 比较，三选一突变和跨代血脉。
-- PC 与移动端输入、音效、粒子、慢动作与 HUD。
-- localStorage 存档。
-- `runExperiment(1337)` 的 200 次配对 assay。
+**Status: Implemented**
 
-这些功能构成当前可玩的产品，而不是未来承诺。
+- 50-second generations with three end conditions.
+- Sugar, yeast, rot, energy, and automatic egg laying.
+- Predator approach, committed lunge, and recovery.
+- GF READY, jump escape, cooldown, and energy cost.
+- Player/wild-type comparison, three-card mutation draft, and lineage progression.
+- Desktop and mobile input, sound, particles, slow motion, and HUD feedback.
+- Browser `localStorage` save.
+- The fixed `1337` experimental assay with `200` paired trials.
+
+These are the current playable product features, not future promises.

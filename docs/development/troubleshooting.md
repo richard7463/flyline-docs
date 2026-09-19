@@ -1,21 +1,23 @@
-# 故障排查
+# Troubleshooting
 
-## 页面空白
+**Status: Implemented guidance**
 
-确认通过 HTTP server 打开，而不是 `file://`；检查浏览器控制台中的 module 路径和 Phaser 文件加载错误。
+## Blank page
 
-## 游戏开始但没有声音
+Serve the project through an HTTP server rather than `file://`. Then check the browser console for module paths and Phaser loading errors.
 
-浏览器通常要求先发生用户手势。点击开始按钮后，WebAudio 才会恢复，这是正常的浏览器策略。
+## Game starts without sound
 
-## 移动端无法移动
+Browsers usually require a user gesture before WebAudio can resume. Starting the game through the start button should unlock audio; this is normal browser behavior.
 
-确认触摸屏幕时浮动摇杆出现，检查 GF 按钮和暂停按钮没有被摇杆层覆盖。无头触摸脚本不能完全替代真实手机验证。
+## Touch movement does not work
 
-## 实验数字变化
+Confirm that the floating joystick appears when the dish is touched, and that the GF and pause buttons are not covered by the joystick layer. Automated touch checks cannot fully replace a real phone check.
 
-先确认没有修改 GF、捕食者 committed lunge 或 assay 指标；再运行固定 seed 的 `runExperiment(1337)`。如果新增了随机数消费，检查其是否破坏了既有消费顺序。
+## Experimental figures changed
 
-## 存档看起来异常
+First confirm that GF rules, the predator's committed lunge, and metric definitions were not changed. Rerun the fixed seed `1337` assay and check whether a new random-number consumption point changed the existing order. Report the changed setup and result rather than silently restoring a number.
 
-使用菜单清除 lineage save 后重新加载。该操作只删除当前浏览器 localStorage 中的本地血脉。
+## Save looks wrong
+
+Use **Clear lineage save** and reload. This removes only the local lineage stored by the current browser site.

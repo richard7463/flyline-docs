@@ -1,17 +1,21 @@
-# 路线图总览
+# Roadmap overview
 
-Flyline 的路线不是单纯增加内容，而是让每一层生物学约束都变成可玩的决策。
+**Status: Implemented, In progress, and Planned by section**
 
-## 当前
+Flyline's roadmap is not only a content list. Each proposed layer must turn a biological or systemic constraint into a player decision that can be explained and tested.
 
-完成单机血脉生存、GF 逃逸、wild type 比较、移动端、音效和可复现实验。
+## Current
 
-## 下一阶段
+**Implemented:** single-player lineage survival, GF escape, wild-type comparison, desktop and mobile controls, local saves, and the fixed experimental comparison.
 
-完成行为型突变重构、环境与捕食者变化、每日种子和更完整的新手体验，让一局从“能玩”发展为“值得反复研究自己的 build”。
+## Next
 
-## 再之后
+**In progress:** validate more behavioral mutations, add controlled environmental and predator variation, improve onboarding, and evaluate daily-seed ideas. The acceptance criterion is a meaningful change in play, not merely code or terminology.
 
-在单机规则稳定后，探索受限 agent 接口、同场比较、公开只读状态和跨种子评测。多人不是当前功能，也不会绕过单机规则直接上线。
+## Later
 
-详细边界见[已实现](implemented.md)、[建设中](in-progress.md)和[远期方向](future.md)。
+**Planned:** after the single-player rules and public interfaces are stable, consider constrained agent interfaces, same-world comparisons, read-only state, and cross-seed evaluation. Multiplayer, AI participation, open APIs, and benchmarks are not current features.
+
+A possible service-layer sequence is deliberately later than the local game: `local simulation → receipt schema → authoritative session → read-only observation API → constrained action/evaluation API → optional x402 service payments → token evaluation`. Each step requires its own interface, validation, security, and privacy review.
+
+See [Implemented](implemented.md), [In progress](in-progress.md), and [Future directions](future.md) for scope boundaries. See [Economy and optional services](../economy/README.md) for the separate research track.

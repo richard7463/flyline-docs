@@ -1,16 +1,14 @@
-# 参考资料
+# References
 
-## 主要科学锚点
+**Status: Planned for fuller citation metadata**
 
-- Ache, J. M. et al. (2019), 关于果蝇视觉运动与逃逸回路的研究资料。
-- MaleCNS v1.0，果蝇雄性中枢神经系统连接数据与细胞类型资料。
+## Current science anchors
 
-项目使用这些资料支持回路命名、连接关系和突触计数锚点；具体游戏规则仍是 Flyline 的可玩化简化模型。
+- Ache, J. M. et al. (2019), research on fruit-fly motion vision and escape circuits.
+- MaleCNS v1.0, data and cell-type resources for the male fruit-fly central nervous system.
 
-## 阅读边界
+These references support circuit naming, relationship descriptions, and synapse-count anchors. The actual game rules remain a playable simplification.
 
-公开说明优先使用“inspired by”“design anchor”“simplified model”等措辞。若未来补充正式论文链接、数据版本或细胞级映射，会在这里注明版本、访问日期和对应实现范围。
+## Reading boundary
 
-## 项目内部资料
-
-产品、架构和突变设计的公开化说明来自仓库中的工程文档，但公开文档不会暴露本机路径、内部会话指令、临时调试脚本或部署凭据。
+Public text uses terms such as “inspired by,” “design anchor,” and “simplified model.” A future update should add stable paper links, dataset versions, access dates, and an explicit mapping from each source claim to the implemented rule. Until then, readers should not infer a complete cell-level reconstruction from the citation names alone.

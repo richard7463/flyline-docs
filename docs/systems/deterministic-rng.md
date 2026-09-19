@@ -1,15 +1,17 @@
-# 确定性随机数
+# Deterministic RNG
 
-同一个 world seed 应该生成同一套世界内容，才能支持实验、分享和未来重放。
+**Status: Implemented for the current simulation rules**
 
-## 当前纪律
+The same world seed should produce the same world inputs so that experiments and debugging can be repeated.
 
-世界重置时，种子会结合 generation 初始化；食物布局、wild type 突变和捕食者出生点按固定顺序消费随机数。新增事件或环境随机性必须追加到既有消费之后，不能插入中间，否则旧种子会得到完全不同的世界。
+## Current discipline
 
-## 有意不确定的部分
+When a world resets, the seed is combined with the generation. Food layout, wild-type traits, and predator spawn positions consume random values in a defined order. New rule randomness must be appended after existing consumption rather than inserted in the middle, or old seeds will produce different worlds.
 
-Mutation Draft 的抽卡保留运行间的新鲜感；部分表现时长也不影响规则复现。未来若要实现完整 replay，应把这些消费点分成明确的 simulation RNG 与 presentation RNG。
+## Deliberate variation
 
-## 贡献规则
+Mutation Draft presentation retains some run-time freshness, and presentation timing does not define the rule result. A complete replay system is **Planned**; it would separate simulation RNG from presentation RNG and record every simulation input.
 
-涉及世界规则的改动必须记录是否新增 RNG 消费，并重新跑 `runExperiment(1337)`。不要为了方便在 `sim.js` 中调用 `Math.random()`。
+## Contribution rule
+
+A rule change must state whether it adds RNG consumption and must rerun the fixed experiment with seed `1337`. Do not use an untracked random source inside the pure simulation layer.

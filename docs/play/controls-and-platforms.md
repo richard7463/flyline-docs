@@ -1,15 +1,17 @@
-# 操作与平台
+# Controls and platforms
 
-## 桌面浏览器
+**Status: Implemented**
 
-WASD、方向键和按住鼠标指针都可以控制飞行方向。Space 触发 GF 逃逸。暂停按钮会打开菜单，不会清除血脉。
+## Desktop browser
 
-## 触摸设备
+WASD, arrow keys, or a held mouse pointer control direction. Space triggers GF escape when it is READY. Pause opens the menu without deleting the lineage.
 
-触摸屏幕任意处并拖动即可操控；摇杆底盘会在触摸位置浮现。GF ESCAPE 固定在右下角，避免与全屏摇杆争夺点击层级。
+## Touch devices
 
-## 浏览器与存档
+Press and drag in the dish to use the floating joystick. The joystick appears at the touch position. **GF ESCAPE** stays in the lower-right area so it does not compete with the full-screen joystick.
 
-项目使用 Phaser 3 和原生 ES modules，无构建步骤。存档保存在当前浏览器的 localStorage 中；清除浏览器站点数据或在菜单点击 Clear lineage save 会重新开始。
+## Browser and saves
 
-当前版本建议使用现代桌面或移动浏览器。移动端的无头自动化检查只能验证控件与事件，不能替代真实设备上的触摸手感、音效和横竖屏试玩。
+The project uses Phaser 3 and native ES modules. Lineage state is stored in the current browser's `localStorage`; clearing site data or choosing **Clear lineage save** starts over.
+
+A modern desktop or mobile browser is recommended. Automated mobile checks can verify controls and events, but they cannot replace real-device checks of touch feel, sound, orientation, or long-session pacing.
